@@ -2,7 +2,7 @@
 {% load catalog_extras %}
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="{% url 'home' %}">Просто магазин</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Shop by Mokan</a>
   <img src="{% static 'logo.svg' %}" alt="" width="42" height="42">
   <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
@@ -25,7 +25,9 @@
     {% if user.is_authenticated %}
         <div class="text-success">Пользователь: {{ user.get_username }}</div>
     {% endif %}
-
+    {% if user.is_authenticated == False %}
+    <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="{% url 'register' %}">Регистрация</a>
+    {% endif %}
     <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="{% url 'cart:cart' %}">Корзина</a>
 
     {% if user.is_authenticated %}
