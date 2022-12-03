@@ -1,1 +1,1 @@
-web: gunicorn diplom_django_netology.wsgi
+web: gunicorn ebdjango.wsgi
