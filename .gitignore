@@ -197,8 +197,8 @@ celerybeat-schedule
 .env
 
 # virtualenv
-.venv
-venv/
+.ebdjango-venv
+ebdjango-venv/
 ENV/
 
 # Spyder project settings
